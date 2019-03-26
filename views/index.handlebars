@@ -1,0 +1,65 @@
+<div class="container">
+  <div class = "jumbotron">
+
+      <H1> EAT DA BURGERS!</H1>
+      <img src"/assets/images/burger.png" alt="burger" class="img-responsive center-block">
+  </div>  
+
+<div class = "row">
+    <div class="col-md-6">
+
+        <H2>Which Burger do you feel like eating?</H2>
+        <ul>
+            {{#each burgers}}
+                {{unless this.devoured}}
+                <li class="burger-name">
+                    {{this.burger_name}}
+                        <form action="/burgers/updateOne{{this.id}}?_method=PUT" method="POST">
+                        <input type="hidden" name="devoured" value="1">
+                        <button type = "submit" class="btn btn-default">I'm eating this one!</button>
+                        </form>
+                 </li>
+                 {{/unless}}
+                {{/each}} 
+        </ul>
+    </div>
+
+
+<dvi class = "col-md-6">
+
+    <H2>Devour It!</H2>
+
+
+<ul>
+      {{#each burgers}}
+        {{#if this.devoured}}
+        <li class="burger-name">
+          {{this.burger_name}}
+          <form action="/burgers/updateOne{{this.id}}?_method=PUT" method="POST">
+            <input type='hidden' name='devoured' value='0'>
+            <button type='submit' class="btn btn-default">OH GROSS, PUT IT BACK!</button>
+          </form>
+        </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div class="col-md-12 add-burger">
+  <h2>Add a Burger</h2>
+  <form class="create-form" method="POST" action="burgers/insertOne">
+    <div class="form-group">
+      <input type="text" id="bur" name="name">
+    </div>
+    <button type="submit" class="btn btn-default">Add Burger</button>
+  </form>
+</div>
+</div>
+
+
+
+
