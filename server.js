@@ -4,11 +4,13 @@ var bodyParser = require("body-parser");
 
 let port = process.env.PORT || 8080;
 
+console.log(port);
+
 var app = express();
 
 app.use(express.static(process.cwd() + '/public'));
 
-app.use(bodyParser.urlendoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('method'));
 
 var exphbs = require("express-handlebars");
