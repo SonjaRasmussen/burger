@@ -5,7 +5,7 @@ Eat-Da-Burger! lets users input the names of burgers they'd like to eat. User su
 
 ### Live Version
 
-[App deployed on Heroku](https://pure-plateau-26782.herokuapp.com/
+[App deployed on Heroku](https://pure-plateau-26782.herokuapp.com/)
 
 ### Functionality
 
@@ -29,4 +29,4 @@ Finally, run the node server locally.
 
 `node server.js`
 
-Then, open the local application on port 8080 at the URL: (http://localhost:8080/?)
+Then, open the local application on [port 8080 at the URL:](http://localhost:8080/?)
