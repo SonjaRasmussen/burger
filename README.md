@@ -5,7 +5,7 @@ Eat-Da-Burger! lets users input the names of burgers they'd like to eat. User su
 
 ### Live Version
 
-
+[App deployed on Heroku](https://pure-plateau-26782.herokuapp.com/
 
 ### Functionality
 
@@ -14,9 +14,8 @@ This app uses Node, Express, Handlebars, and ORM. Node and MySQL are used to que
 #### CRUD Operations:
 
 - READ all entries from the MySQL database and display them using handlebars
-- UPDATE a selected burger by clicking "LET'S EAT THIS!", which...
-hits an /burger/updateOne/:id route in Express to change its "devoured" status in the MySQL database. It'll then re-route the webpage back to the index, where the burger is now in the Devour It! column (via Handlebars). If you don't like it, you can re-route it back to the original Burger column.
-- CREATE a new burger using the "Add a Burger" form, which hits a /burger/createOne route in Express to insert a new burger into the MySQL database and re-routes the webpage back to the index, where the burger is in the Which Burger Would you Like? column.
+- UPDATE a selected burger by clicking "LET'S EAT THIS!", hits an /burger/updateOne/:id route 
+- CREATE a new burger using the "Add a Burger" form, which hits a /burger/createOne route in Express to insert a new burger into the MySQL database and re-routes the webpage back to the index
 
 ### Installation
 
@@ -30,4 +29,4 @@ Finally, run the node server locally.
 
 `node server.js`
 
-Then, open the local application on port 8080 at the URL: http://localhost:8080/?
+Then, open the local application on port 8080 at the URL: (http://localhost:8080/?)
