@@ -13,12 +13,12 @@
         <H2>Which Burger do you feel like eating?</H2>
         <ul>
             {{#each burgers}}
-                {{unless this.devoured}}
+                {{#unless this.devoured}}
                 <li class="burger-name">
                     {{this.burger_name}}
                         <form action="/burgers/updateOne{{this.id}}?_method=PUT" method="POST">
                         <input type="hidden" name="devoured" value="1">
-                        <button type = "submit" class="btn btn-default">I'm eating this one!</button>
+                        <button type = "submit" class="btn btn-success">Eat this one!</button>
                         </form>
                  </li>
                  {{/unless}}
