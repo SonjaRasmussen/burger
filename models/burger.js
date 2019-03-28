@@ -13,6 +13,7 @@ const burger = {
       cb(res);
     });
   },
+  ///to devour the burger
   updateOne: function(objColVals, condition, cb) {
     orm.updateOne("burgers", objColVals, condition, function(res) {
       cb(res);

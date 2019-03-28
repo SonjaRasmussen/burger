@@ -30,8 +30,6 @@
 <dvi class = "col-md-6">
 
     <H2>Devour It!</H2>
-
-
 <ul>
       {{#each burgers}}
         {{#if this.devoured}}
@@ -39,7 +37,7 @@
           {{this.burger_name}}
           <form action="/burgers/updateOne{{this.id}}?_method=PUT" method="POST">
             <input type='hidden' name='devoured' value='0'>
-            <button type='submit' class="btn btn-default">OH GROSS, PUT IT BACK!</button>
+            <button type='submit' class="btn btn-default">Ummm, No Thanks!</button>
           </form>
         </li>
         {{/if}}
@@ -49,10 +47,9 @@
 </div>
 
 
-
-
 <div class="col-md-12 add-burger">
   <h2>Add a Burger</h2>
+ 
   <form class="create-form" method="POST" action="burgers/insertOne">
     <div class="form-group">
       <input type="text" id="bur" name="name">
