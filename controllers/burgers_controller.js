@@ -27,7 +27,7 @@
         });
  });
 
- router.put("/burgers/updateOne:id", function(req, res){
+ router.post("/burgers/updateOne/:id", function(req, res){
      var condition = "id = " + req.params.id;
 
      console.log("condition", condition);
